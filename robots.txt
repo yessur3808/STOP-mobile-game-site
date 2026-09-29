@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yessur3808.github.io/STOP-mobile-game-site/sitemap.xml
