@@ -3,54 +3,126 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pocket Railway — One-Tap World Rail Game</title>
-  <meta name="description" content="Pocket Railway is a clean one-tap world rail game for iPhone, iPad, and Android. Tap inside the target and journey from steam to maglev.">
+  <title>Pocket Railway | Offline Train Game with Lo-fi Music</title>
+  <meta name="description" content="Play Pocket Railway, a one-tap offline train game for iPhone and iPad. Chase perfect stops, explore changing cities and unwind with 12 lo-fi music tracks.">
   <link rel="canonical" href="https://yessur3808.github.io/STOP-mobile-game-site/">
+  <meta name="theme-color" content="#f5f1e8">
+  <link rel="icon" type="image/png" href="assets/pocket-railway-app-icon.png">
+  <link rel="apple-touch-icon" href="assets/pocket-railway-app-icon.png">
+  <meta name="apple-itunes-app" content="app-id=6817458942">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Pocket Railway">
-  <meta property="og:description" content="One tap. One perfect stop. A focused world rail game for iPhone, iPad, and Android.">
-  <meta property="og:image" content="https://yessur3808.github.io/STOP-mobile-game-site/assets/pocket-railway-app-icon.png">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:site_name" content="Pocket Railway">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://yessur3808.github.io/STOP-mobile-game-site/">
+  <meta property="og:title" content="Pocket Railway | One tap. One perfect stop.">
+  <meta property="og:description" content="An offline train timing game with changing cities and calm lo-fi music. How far can you ride? Available for iPhone and iPad.">
+  <meta property="og:image" content="https://yessur3808.github.io/STOP-mobile-game-site/assets/pocket-railway-social.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:image:alt" content="Pocket Railway, a tiny blue train with trees and a warm setting sun">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pocket Railway | One tap. One perfect stop.">
+  <meta name="twitter:description" content="Chase perfect arrivals, explore changing cities and unwind with 12 lo-fi tracks. Play offline on iPhone and iPad.">
+  <meta name="twitter:image" content="https://yessur3808.github.io/STOP-mobile-game-site/assets/pocket-railway-social.png">
+  <meta name="twitter:image:alt" content="Pocket Railway train, trees and sunset">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://yessur3808.github.io/STOP-mobile-game-site/#app","name":"Pocket Railway","url":"https://yessur3808.github.io/STOP-mobile-game-site/","applicationCategory":"GameApplication","operatingSystem":"iOS, iPadOS","inLanguage":"en","description":"An offline one-tap train timing game with changing city scenery, evolving trains and 12 calm lo-fi music tracks.","image":"https://yessur3808.github.io/STOP-mobile-game-site/assets/pocket-railway-social.png","screenshot":["https://yessur3808.github.io/STOP-mobile-game-site/assets/gameplay.jpg","https://yessur3808.github.io/STOP-mobile-game-site/assets/alpine.jpg","https://yessur3808.github.io/STOP-mobile-game-site/assets/japan.jpg"],"installUrl":"https://apps.apple.com/app/id6817458942","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://apps.apple.com/app/id6817458942"}}</script>
   <style>
-    :root { color-scheme: light; --cream:#f5f1e8; --ink:#24313a; --muted:#69736e; }
+    :root { color-scheme:light; --cream:#f5f1e8; --paper:#fffcf6; --ink:#243640; --muted:#52615b; --sage:#486c56; --line:#24364024; }
     * { box-sizing:border-box; }
-    body { margin:0; min-height:100vh; background:linear-gradient(160deg,var(--cream),#dce8e7); color:var(--ink); font:17px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    main { width:min(920px,calc(100% - 32px)); margin:0 auto; padding:clamp(42px,9vw,96px) 0 48px; }
-    .hero { display:grid; grid-template-columns:minmax(0,1fr) minmax(180px,320px); gap:clamp(32px,7vw,84px); align-items:center; }
-    h1 { margin:0; font-size:clamp(42px,10vw,80px); line-height:.9; letter-spacing:.06em; }
-    .brandline { margin:12px 0 0; color:#5f866d; font-size:13px; font-weight:800; letter-spacing:.22em; }
-    p { max-width:600px; margin:0 0 18px; color:var(--muted); }
-    .tagline { margin-top:18px; color:var(--ink); font-size:clamp(20px,3vw,28px); font-weight:650; }
-    .icon { width:100%; border-radius:26%; box-shadow:0 28px 70px #24313a24; }
-    .badges { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
-    .badge { display:inline-flex; min-height:48px; align-items:center; padding:0 18px; border:1px solid #24313a1f; border-radius:14px; background:#fffcf6a8; color:var(--ink); font-weight:650; }
-    .note { margin-top:16px; font-size:14px; }
-    footer { display:flex; flex-wrap:wrap; gap:20px; padding-top:clamp(56px,9vw,96px); font-size:14px; }
-    footer a { color:var(--ink); }
-    @media (max-width:660px) { .hero { grid-template-columns:1fr; } .icon { width:min(64vw,260px); order:-1; } }
+    body { margin:0; background:var(--cream); color:var(--ink); font:17px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--sage); text-underline-offset:4px; }
+    a:focus-visible,summary:focus-visible { outline:3px solid #287a99; outline-offset:5px; }
+    .skip { position:absolute; top:-80px; left:16px; padding:12px; background:var(--paper); z-index:1; }
+    .skip:focus { top:12px; }
+    nav,main,footer { width:min(1080px,calc(100% - 40px)); margin:auto; }
+    nav { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:22px 0; font-size:14px; }
+    nav .brand { display:flex; gap:10px; align-items:center; color:var(--ink); text-decoration:none; font-weight:700; }
+    nav img { border-radius:12px; }
+    .hero { display:grid; grid-template-columns:1.2fr .8fr; gap:clamp(28px,7vw,84px); align-items:center; padding:clamp(32px,7vw,80px) 0; }
+    .eyebrow { color:var(--sage); font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+    h1 { margin:12px 0 20px; font-size:clamp(44px,7vw,78px); line-height:1.02; letter-spacing:-.04em; }
+    h1 span { display:block; }
+    .tagline { color:var(--ink); font-size:clamp(23px,3vw,30px); line-height:1.3; font-weight:600; }
+    p { color:var(--muted); margin:0 0 18px; max-width:64ch; }
+    .icon { width:100%; max-width:350px; height:auto; justify-self:center; border-radius:25%; box-shadow:0 20px 60px #24364014; }
+    .cta { display:inline-flex; align-items:center; justify-content:center; min-height:54px; border-radius:14px; padding:12px 23px; background:var(--ink); color:white; text-decoration:none; font-weight:650; }
+    .cta:hover { background:var(--sage); }
+    .note { margin:14px 0 0; font-size:14px; }
+    section { padding:44px 0; }
+    h2 { font-size:clamp(28px,4vw,38px); line-height:1.2; letter-spacing:-.025em; margin:0 0 14px; }
+    h3 { font-size:20px; line-height:1.3; margin:0 0 10px; }
+    .features { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .features p { margin:0; font-size:16px; }
+    .gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(12px,3vw,32px); margin:28px 0 0; }
+    figure { margin:0; }
+    figure img { width:100%; height:auto; border:1px solid var(--line); border-radius:20px; display:block; }
+    figcaption { margin:12px 0 0; color:var(--muted); font-size:14px; }
+    .faq { max-width:760px; }
+    details { border-bottom:1px solid var(--line); padding:18px 0; }
+    summary { cursor:pointer; font-weight:650; min-height:30px; }
+    details p { margin:12px 0 0; }
+    .closing { border-radius:24px; background:#e4eadd; padding:32px; margin:24px 0; }
+    footer { display:flex; flex-wrap:wrap; gap:22px; padding:36px 0; font-size:14px; }
+    @media(max-width:680px) {
+      .hero { grid-template-columns:1fr; padding-top:24px; gap:28px; }
+      .icon { width:160px; justify-self:start; order:-1; }
+      h1 span { display:inline; }
+      .features { grid-template-columns:1fr; gap:28px; }
+      section { padding:32px 0; }
+      figure img { border-radius:12px; }
+      figcaption { font-size:12px; line-height:1.4; }
+      .closing { padding:24px; }
+    }
   </style>
 </head>
 <body>
-<main>
-  <section class="hero">
+<a class="skip" href="#main">Skip to content</a>
+<nav aria-label="Main navigation">
+  <a class="brand" href="./"><img src="assets/pocket-railway-app-icon.png" width="36" height="36" alt="">Pocket Railway</a>
+  <a href="support.html">Help &amp; support</a>
+</nav>
+<main id="main">
+  <section class="hero" aria-labelledby="title">
     <div>
-      <h1>POCKET</h1>
-      <p class="brandline">RAILWAY</p>
+      <p class="eyebrow">An offline train timing game</p>
+      <h1 id="title">Pocket <span>Railway</span></h1>
       <p class="tagline">One tap. One perfect stop.</p>
-      <p>Stop the tiny metro inside the station target. Each arrival gets faster, the target gets tighter, and the world changes around your run.</p>
-      <div class="badges" aria-label="Download availability">
-        <a class="badge" href="https://apps.apple.com/app/id6817458942">Download on the App Store</a>
-        <span class="badge">Coming to Google Play</span>
-      </div>
-      <p class="note">No account required. No ads or in-app purchases in version 1.</p>
+      <p>Tap when your train reaches the station target. Chase a perfect streak, watch the scenery change and let calm lo-fi music carry you to the next stop.</p>
+      <a class="cta" href="https://apps.apple.com/app/id6817458942">Download on the App Store</a>
+      <p class="note">Free to play on iPhone and iPad. No ads or in-app purchases.<br>Android release coming to Google Play.</p>
     </div>
-    <img class="icon" src="assets/pocket-railway-app-icon.png" width="512" height="512" alt="Pocket Railway app icon showing a tiny train, trees, sun, and an oval railway loop">
+    <img class="icon" src="assets/pocket-railway-app-icon.png" width="512" height="512" alt="A tiny blue train, trees and sun on the Pocket Railway app icon" fetchpriority="high">
   </section>
-  <footer>
-    <a href="support.html">Support</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <span>© 2026 CurlyCoffee</span>
-  </footer>
+  <section class="features" aria-label="Game features">
+    <div><h2 style="font-size:20px">Easy to start. Hard to master.</h2><p>One tap stops the train. Land inside the target to keep going. Every arrival makes the next stop faster and tighter. Miss, retry, and go again.</p></div>
+    <div><h2 style="font-size:20px">A little world to discover.</h2><p>Travel from city streets to Alpine scenery and Japanese stations. Your train evolves from steam to maglev as your score climbs.</p></div>
+    <div><h2 style="font-size:20px">Your own quiet carriage.</h2><p>Pick from 12 soothing lo-fi tracks. Play offline on your commute or during a break. Music, effects and haptics have separate controls.</p></div>
+  </section>
+  <section aria-labelledby="journey-title">
+    <p class="eyebrow">Actual gameplay</p>
+    <h2 id="journey-title">Every stop takes you somewhere.</h2>
+    <p>Build your perfect streak, explore World Journey and discover the trains in your museum. Your local Top 5 keeps your best runs ready to share.</p>
+    <div class="gallery">
+      <figure><img src="assets/gameplay.jpg" width="480" height="1044" loading="lazy" decoding="async" alt="Pocket Railway gameplay in the United Kingdom, showing the train and station target"><figcaption>Tap inside the station target.</figcaption></figure>
+      <figure><img src="assets/alpine.jpg" width="480" height="1044" loading="lazy" decoding="async" alt="A perfect train stop among Swiss mountains in Pocket Railway"><figcaption>Keep your streak through the Alps.</figcaption></figure>
+      <figure><img src="assets/japan.jpg" width="480" height="1044" loading="lazy" decoding="async" alt="A high-score journey through Japan in Pocket Railway"><figcaption>Ride further. Discover new scenery.</figcaption></figure>
+    </div>
+  </section>
+  <section class="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Before you board.</h2>
+    <details><summary>How do you play Pocket Railway?</summary><p>Tap anywhere when the center of your train is inside the highlighted station target. GOOD, GREAT and PERFECT stops all add one point. A PERFECT builds your streak. A miss or an empty timer ends the run, and Retry starts another immediately.</p></details>
+    <details><summary>Can I play without Wi-Fi or an account?</summary><p>Yes. The core train game, music and local high scores work offline without an account. Sharing through other apps may require a connection. Features can vary by installed version.</p></details>
+    <details><summary>Is it available for iPhone, iPad and Android?</summary><p>Pocket Railway is available on the App Store for iPhone and iPad. The Android release is coming to Google Play. The game interface is currently in English.</p></details>
+    <details><summary>Are there ads or in-app purchases?</summary><p>No. The current release has no ads or in-app purchases. There are no energy systems or paid retries.</p></details>
+    <details><summary>Can I choose the music?</summary><p>Yes. Choose from 12 lo-fi tracks, including Rain on Glass, Amber Fields and Sunday Tram. You can turn music off independently of sound effects and haptics.</p></details>
+    <details><summary>Does the train game get harder?</summary><p>Yes. Speed rises and the target becomes narrower as your score increases. Reach 600 stops to unlock the secret Arc Line, a semicircular route.</p></details>
+  </section>
+  <section class="closing" aria-labelledby="closing-title">
+    <h2 id="closing-title">Your next perfect stop is waiting.</h2>
+    <p>Short runs, instant retries, and a whole journey ahead.</p>
+    <a class="cta" href="https://apps.apple.com/app/id6817458942">Play Pocket Railway</a>
+  </section>
 </main>
+<footer><a href="support.html">Support</a><a href="privacy-policy.html">Privacy policy</a><span>© 2026 CurlyCoffee</span></footer>
 </body>
 </html>
